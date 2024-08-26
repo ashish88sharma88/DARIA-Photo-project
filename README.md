@@ -18,3 +18,14 @@ Font Awesome: For icons used throughout the website.
 Given
 Prerequisites
 To run the website locally, you need a modern web browser (e.g., Chrome, Firefox) and optionally a code editor (e.g., VSCode, Sublime Text) to view or modify the code.
+
+Installation
+Clone the repository:
+git clone https://github.com/yourusername/photographer-portfolio.git
+
+
+Navigate to the project directory:
+cd photographer-portfolio
+Open index.html in your web browser:
+
+You can double-click on the index.html file or right-click and choose "Open with" your preferred web browser.
