@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Forum&family=Gaegu:wght@300&family=Julius+Sans+One&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Forum&family=Gaegu:wght@300&family=Julius+Sans+One&family=Quicksand:wght@300..700&display=swap');
+
+        h1 {
+            font-size: 40px;
+            text-align: center;
+            font-family: "Julius Sans One";
+            font-weight: 400;
+            font-style: normal;
+            ;
+            color: black;
+        }
+
+        /* img{
+           max-width: 600px;
+           float: left;
+           height: auto;
+           margin-top: 0%;
+           display:grid;
+           grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+           grid-gap: 20px;
+           padding-top: 0px;
+       }*/
+
+        /*img:hover{
+opacity: 0.8;
+transition: transform 0.3 ease;
+
+       }*/
+
+
+        .btn {
+            font-family: "Quicksand", sans-serif;
+            background-color: lightgray;
+            color: black;
+            padding: 12px 16px;
+            font-size: 20px;
+            cursor: pointer;
+            border: none;
+            position: absolute;
+            top: 20px;
+            left: 20px;
+        }
+
+        .btn:hover {
+            background-color: lightblue;
+        }
+
+        /* Gallery styles */
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .images img {
+            width: 450px;
+            height: auto;
+            margin: 10px;
+            cursor: pointer;
+            padding-left: 60px;
+
+
+        }
+
+        /* Modal styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.9);
+        }
+
+        .modal-content {
+            position: relative;
+            margin: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 80%;
+            max-width: 1200px;
+            height: 80%;
+        }
+
+        .slide {
+            display: none;
+        }
+
+        .slide img {
+            max-width: 50%;
+            max-height: 50%;
+            margin: auto;
+            display: block;
+            margin-top: 200px;
+            */
+        }
+
+        /* Navigation buttons */
+        .prev,
+        .next {
+            position: absolute;
+            top: 50%;
+            width: auto;
+            padding: 16px;
+            margin-top: -22px;
+            color: white;
+            font-weight: bold;
+            font-size: 35px;
+            cursor: pointer;
+            z-index: 100;
+        }
+
+        .prev {
+            left: 0;
+        }
+
+        .next {
+            right: 0;
+        }
+
+        /* Close button */
+        .close {
+            position: absolute;
+            top: 0;
+            right: 15px;
+            color: white;
+            font-size: 30px;
+            font-weight: bold;
+            cursor: pointer;
+            z-index: 101;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: #bbb;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    </style>
+
+
+
+</head>
+
+<body>
+
+    <a href="photographer website.html">
+        <button class="btn"><i class="fa fa-home"></i> Home</button>
+
+    </a>
+
+    <h1>ART PHOTOGRPAPHY</h1>
+    <div class="artimage">
+
+
+        <div class="gallery">
+            <div class="images">
+                <img src="images/art13.jpg" alt="Image 1" onclick="openModal(); currentSlide(1)">
+                <img src="images/art10.jpg" alt="Image 2" onclick="openModal(); currentSlide(2)">
+                <img src="images/art12.jpg" alt="Image 3" onclick="openModal(); currentSlide(3)">
+                <img src="images/art5.jpg" alt="Image 3" onclick="openModal(); currentSlide(3)">
+                <img src="images/art6.jpg" alt="Image 3" onclick="openModal(); currentSlide(3)">
+                <img src="images/art7.jpg" alt="Image 3" onclick="openModal(); currentSlide(3)">
+                <img src="images/art8.jpg" alt="Image 3" onclick="openModal(); currentSlide(3)">
+                <img src="images/art9.jpg" alt="Image 3" onclick="openModal(); currentSlide(3)">
+                <img src="images/art11.jpg" alt="Image 3" onclick="openModal(); currentSlide(3)">
+                <img src="images/art14.jpg" alt="Image 3" onclick="openModal(); currentSlide(3)">
+                <img src="images/art15.jpg" alt="Image 3" onclick="openModal(); currentSlide(3)">
+                <img src="images/art12.jpg" alt="Image 3" onclick="openModal(); currentSlide(3)">
+                <img src="images/art12.jpg" alt="Image 3" onclick="openModal(); currentSlide(3)">
+
+
+                <!-- Add more images here -->
+            </div>
+
+            <!-- The Modal -->
+            <div id="myModal" class="modal">
+                <span class="close cursor" onclick="closeModal()">&times;</span>
+                <div class="modal-content">
+                    <div class="slides">
+                        <div class="slide">
+                            <img src="images/art13.jpg" alt="Image 1">
+                        </div>
+                        <div class="slide">
+                            <img src="images/art10.jpg" alt="Image 2">
+                        </div>
+                        <div class="slide">
+                            <img src="images/art12.jpg" alt="Image 3">
+                        </div>
+                        <div class="slide">
+                            <img src="images/art5.jpg" alt="Image 3">
+                        </div>
+                        <div class="slide">
+                            <img src="images/art6.jpg" alt="Image 3">
+                        </div>
+                        <div class="slide">
+                            <img src="images/art7.jpg" alt="Image 3">
+                        </div>
+                        <div class="slide">
+                            <img src="images/art8.jpg" alt="Image 3">
+                        </div>
+                        <div class="slide">
+                            <img src="images/art9.jpg" alt="Image 3">
+                        </div>
+                        <div class="slide">
+                            <img src="images/art11.jpg" alt="Image 3">
+                        </div>
+                        <div class="slide">
+                            <img src="images/art14.jpg" alt="Image 3">
+                        </div>
+                        <div class="slide">
+                            <img src="images/art15.jpg" alt="Image 3">
+                        </div>
+
+
+
+                        <!-- Add more slides here -->
+
+
+                        <!-- Navigation buttons -->
+                        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+
+
+
+
+
+        <script>
+
+            let slideIndex = 1;
+
+            function openModal() {
+                document.getElementById('myModal').style.display = 'block';
+            }
+
+            function closeModal() {
+                document.getElementById('myModal').style.display = 'none';
+            }
+
+            function plusSlides(n) {
+                showSlides(slideIndex += n);
+            }
+
+            function currentSlide(n) {
+                showSlides(slideIndex = n);
+            }
+
+            function showSlides(n) {
+                let i;
+                let slides = document.getElementsByClassName('slide');
+                if (n > slides.length) { slideIndex = 1 }
+                if (n < 1) { slideIndex = slides.length }
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = 'none';
+                }
+                slides[slideIndex - 1].style.display = 'block';
+            }
+
+
+        </script>
+</body>
+
+</html>
