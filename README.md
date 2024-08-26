@@ -21,7 +21,7 @@ To run the website locally, you need a modern web browser (e.g., Chrome, Firefox
 
 Installation
 Clone the repository:
-git clone https://github.com/yourusername/photographer-portfolio.git
+git clone https://github.com/yourusername/DARIA-Photo-project.git
 
 
 Navigate to the project directory:
